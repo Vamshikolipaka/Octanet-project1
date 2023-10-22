@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sri Elevators</title>
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+
+    <style>
+      * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1; 
+  background-color: rgba(178, 192, 204, 0.777);
+  align-items: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header */
+header {
+  background-color: #333;
+  background-image: url(elivatorbackground.jpg);
+  color: #fff;
+  padding: 20px 0;
+  background-repeat: none;
+  background-size: cover;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  color: white;
+
+  &:hover{
+    text-decoration: underline;
+  }
+}
+
+.hero {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.hero h2 {
+  font-size: 45px;
+  margin-bottom: 20px;
+  font-variant: small-caps;
+  font-weight: 700;
+  color:white;
+}
+
+.hero p {
+  font-size: 25px;
+  margin-bottom: 30px;
+  color:white;
+  font-weight: bold;
+}
+
+.btn {
+  display: inline-block;
+  background:linear-gradient(to right, #ffad33, #ff990078);
+  color: #fff;
+  padding: 15px 40px;
+  text-decoration: none;
+  border-radius: 5px;
+  box-shadow:  rgba(255, 254, 254, 0.833) 0 0 10px;
+}
+
+.btn:hover {
+  background:linear-gradient(to right, #ff990078, #ffad33);
+
+}
+
+/* Services */
+#services {
+  background-color: #f2f2f2;
+  padding: 50px 0;
+}
+
+@keyframes fade{
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+
+.services-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; 
+  align-items: center; 
+  gap: 20px; 
+}
+
+.service {
+  margin-bottom: 40px;
+  border-radius: 10px;
+  animation-range: entry 50% cover 50%;
+  animation: fade linear both;
+  animation-timeline: view();
+  animation-range: entry 50% cover 50%;
+  display: flex;
+  flex-direction:row;
+  text-align: center;
+  margin-left: 70px;
+}
+
+.service img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+  padding: 6px;
+  background-color: #ffad33;
+  box-shadow: 0 0 15px;
+}
+
+
+.service h3 {
+  font-size: 27px;
+  margin: 20px 0;
+  background:linear-gradient(to right, #ffad33, black) ;
+  -webkit-background-clip: text;
+  color: transparent;
+  display: inline;
+}
+
+.service p {
+  font-size: 16px;
+  animation: fade linear 2s ease both;
+}
+
+span{
+  display: none;
+}
+#service-inst-info{
+  padding: 70px 0 0 50px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  cursor: pointer;
+  font-size: 24px;
+  width: 100%;
+  border-right-color: black;
+}
+#service-main-info{
+  padding: 70px 0 0 50px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  cursor: pointer;
+  font-size: 24px;
+}
+#service-mod-info{
+  padding: 70px 0 0 50px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  cursor: pointer;
+  font-size: 24px;
+  width: 100%;
+}
+#service-serv-info{
+  padding: 70px 10px 0 50px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  cursor: pointer;
+  font-size: 24px;
+  width: 100%;
+}
+.service:hover span{
+  display: block;
+  animation: fade 1s ease both;
+}
+/* About */
+#about {
+  padding: 50px 0;
+}
+
+#about h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+#about p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+/* Contact */
+#contact {
+  background-color: #333;
+  color: #fff;
+  padding: 50px 0;
+}
+
+#contact h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+form textarea {
+  height: 100px;
+}
+
+form button {
+  background-color: #ff9900;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+form button:hover {
+  background-color: #ffad33;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+footer p {
+  font-size: 14px;
+}
+
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <div class="container">
+          <h1 class="logo"> <i class="las la-app-store"></i>Sri Elevators</h1>
+          <ul class="nav-links">
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="hero">
+        <div class="container">
+          <h2>Welcome to Sri Elevators</h2>
+          <p>Providing Quality Elevator Services</p>
+          <a href="#contact" class="btn">Contact Us</a>
+        </div>
+      </div>
+    </header>
+
+    <section id="services">
+      <div class="container">
+        <h2 style="font-size: 35px; padding: 10px;text-align: center; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Our Services</h2>
+        <div class="service">
+          <img  class="inst-img"
+            src="https://www.spiderstaging.com/wp-content/uploads/elevator-shaft-Spider-2.jpg"
+            alt="Elevator Installation"
+          />
+          <div id="service-inst-info">
+          <h3>Elevator Installation</h3>
+          <p>
+            We offer professional elevator installation services for residential
+            and commercial buildings.<br>
+            <span>Elevate your space with our expert elevator installation services, 
+            enhancing accessibility and convenience for both residential and commercial properties.</span>
+          </p>
+        </div>
+        </div>
+        <div class="service">
+          <div id="service-main-info">
+          <h3>Elevator Maintenance</h3>
+          <p>
+            Our team of experts provides regular maintenance and repairs to
+            ensure your elevators operate smoothly. <br>
+            <span>Trust our dedicated team of experts to deliver top-notch elevator maintenance and repair services,
+               keeping your elevators running smoothly and passengers moving without interruption</span>
+          </p>
+        </div>
+        <img class="main-img"
+        src="maintainance.jpg"
+        alt="Elevator Maintenance"
+      />
+        </div>
+        <div class="service">
+          <img class="mod-img"
+            src="https://images.squarespace-cdn.com/content/v1/57eb44916b8f5be752c94f84/1674004619057-VG9V03VEWQW4QNLSUP8K/2901-KONE-Elevator-1.jpg?format=1500w"
+            alt="Elevator Modernization"
+          />
+          <div id="service-mod-info">
+          <h3>Elevator Modernization</h3>
+          <p>
+            We specialize in upgrading and modernizing older elevator systems
+            with advanced technologies. <br>
+            <span>Elevate your building's performance with our specialization in upgrading and modernizing older elevator systems, 
+              incorporating cutting-edge technologies for enhanced efficiency and reliability.</span>
+          </p>
+        </div>
+        </div>
+        <div class="service" >
+          <div id="service-serv-info">
+            <h3>Emergency Service</h3>
+            <p>Our Elevator Repair and Emergency Service ensures that your elevators remain in top working condition.
+               <span>With our team of skilled technicians on standby, we provide maintenance and repairs, ensuring passenger safety</span>
+               </p>
+          </div>
+          <img class="serv-img" src="https://www.stanleyelevator.com/wp-content/uploads/2017/09/services-commercial-886x360.jpg" alt="Elivator modernization">
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <h2>About Us</h2>
+        <p class="service">
+          Sri Elevators is a leading provider of elevator services with over 10
+          years of experience in the industry. We are committed to delivering
+          safe, reliable, and efficient elevator solutions to our clients.
+        </p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <h2>Contact Us</h2>
+        <form action="#" method="post">
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <textarea
+            name="message"
+            placeholder="Your Message"
+            required
+          ></textarea>
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2023 Sri Elevators. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
